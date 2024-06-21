@@ -1,0 +1,9 @@
+- name: Deploy a chart
+  kubernetes.core.helm:
+    name: test
+    chart_ref: foo/bar
+    release_namespace: test
+    values:
+      image:
+        repository: debian
+        version: 11

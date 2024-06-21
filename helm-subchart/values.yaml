@@ -1,0 +1,8 @@
+db:
+  image:
+    repository: mariadb
+    tag: 10
+
+image:
+  repository: mariadb
+  tag: 10
