@@ -1,8 +1,8 @@
 db:
   image:
     repository: mariadb
-    tag: 10
+    tag: 11
 
 image:
   repository: mariadb
-  tag: 10
+  tag: 11
