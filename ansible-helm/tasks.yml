@@ -1,9 +1,30 @@
-- name: Deploy a chart
+---
+- name: Install trivy-operator
   kubernetes.core.helm:
-    name: test
-    chart_ref: foo/bar
-    release_namespace: test
+    name: trivy-operator
+    namespace: trivy-system
+    chart_repo_url: https://aquasecurity.github.io/helm-charts/
+    chart_ref: trivy-operator
+    chart_version: 0.23.0  # There's a newer version: 0.23.3
     values:
-      image:
-        repository: debian
-        version: 11
+      trivy:
+        image:
+          registry: ghcr.io
+          repository: aquasecurity/trivy
+          tag: 0.52.0  # There's a newer version: 0.53.0
+
+- name: Ansible block with a helm task
+  block:
+    - name: Install trivy-operator
+      kubernetes.core.helm:
+        name: trivy-operator
+        namespace: trivy-system
+        chart_repo_url: https://aquasecurity.github.io/helm-charts/
+        chart_ref: trivy-operator
+        chart_version: 0.23.0
+        values:
+          trivy:
+            image:
+              registry: ghcr.io
+              repository: aquasecurity/trivy
+              tag: 0.52.0
