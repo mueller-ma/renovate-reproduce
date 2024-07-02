@@ -22,7 +22,7 @@
         chart_repo_url: https://aquasecurity.github.io/helm-charts/
         chart_ref: trivy-operator
         chart_version: 0.23.0
-        values:
+        release_values:  # "release_values" is an alias for "values"
           trivy:
             image:
               registry: ghcr.io
