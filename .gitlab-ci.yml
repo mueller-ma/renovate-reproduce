@@ -1,0 +1,4 @@
+build:
+  image: docker/compose
+  script:
+    - docker compose ...
