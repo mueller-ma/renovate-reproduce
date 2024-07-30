@@ -1,1 +1,1 @@
-FROM docker/compose:1.29.2
+FROM docker:27.1.1-cli
