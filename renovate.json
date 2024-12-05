@@ -2,14 +2,5 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
-  ],
-  "packageRules": [
-    {
-      "description": "Compose has been integrated in the official Docker image.",
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["docker/compose"],
-      "replacementName": "docker",
-      "replacementVersion": "27.1.1-cli"
-    }
   ]
 }
