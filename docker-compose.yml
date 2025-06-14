@@ -1,6 +1,6 @@
 ---
 x-shared_setting: &shared_settings
-  image: debian:11
+  image: debian:12
   # Other shared properties here
 
 services:
