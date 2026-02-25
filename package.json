@@ -1,7 +1,7 @@
 {
   "pnpm": {
     "overrides": {
-      "@eslint/eslintrc>minimatch": "10.2.1"
+      "@eslint/eslintrc>minimatch": "10.2.3"
     }
   }
 }
