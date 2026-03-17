@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended"
   ],
+  "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
       "description": "Disable AutoMapper >= 15",
